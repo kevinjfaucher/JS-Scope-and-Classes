@@ -15,9 +15,12 @@ Lexical environments are created in two main contexts:
 
     Global Lexical Environment: This is created when the 
     JavaScript program starts and contains all global variables and functions.
+    
     Function Lexical Environment: Each time a function 
     is invoked, a new lexical environment is created for that 
-    function’s execution context. This environment contains all the 
+    function’s execution context. 
+    
+    This environment contains all the 
     local variables and any references to outer lexical environments 
     (parent functions or global environment).
 
@@ -27,6 +30,7 @@ Each lexical environment has two main components:
 
     Environment Record: Stores the local variables, constants, 
     and functions within that scope.
+    
     Outer Lexical Environment Reference: Points to the lexical 
     environment of its parent (the scope in which the function was created).
 
@@ -79,6 +83,16 @@ it moves up to the global environment.
 
 This process is known as lexical scoping.
 
+Lexical Scoping Rules:
+
+    When a block of code (like inner) tries to access a variable:
+    It first looks in its own lexical environment (inside inner).
+    
+    If it doesn’t find the variable, it looks at the lexical 
+    environment of the parent block (outer in this case).
+   
+    If the variable is still not found, it continues to check 
+    the global lexical environment.
 
 
 */
