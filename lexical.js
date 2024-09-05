@@ -95,4 +95,14 @@ Lexical Scoping Rules:
     the global lexical environment.
 
 
+Lexical scope refers to how the code is written—it’s determined by the 
+syntax and structure of the code. 
+
+It’s about where variables and functions
+are declared in the source code, not about what happens during runtime.
+
+This means that before the code is even executed, the scope of variables 
+is already determined based on their placement in the code.
+It’s a static concept—essentially "fixed" at the time of writing the code.
+
 */
