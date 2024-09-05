@@ -1,0 +1,39 @@
+<pre style="display: flex;">
+    1. Lexical Environment:
+
+    It's the local environment for a block of code (a function or any other block like a loop or conditional).
+    Variables in this environment are scoped to that block.
+    
+    When code runs, it first looks for variables in the immediate block, then looks 
+    outward (parent scope), and continues until it reaches the global scope if necessary.
+
+    2. Closures:
+
+    A closure is when an inner function "remembers" its surrounding lexical 
+    environment even after the outer function has finished executing.
+    
+    The closure preserves the variables in the outer environment so that 
+    they can be used later by the inner function.
+    
+    It doesn't save the parent function’s code, only the variables 
+    (and their values) that were in the parent's scope.
+
+    3. Inner Function Access:
+
+    The inner function can access variables from the saved lexical environment later.
+    However, the inner function can only access what it was already coded to access
+    before it was returned or used later.
+   
+    If the inner function was designed to use a particular variable from the parent
+    environment, it can access it. Otherwise, it's not accessible.
+
+    4. Returning Variables:
+
+    If the inner function is returned, it can access variables from 
+    the parent’s lexical environment.
+
+    However, the parent’s variables are only accessible through the 
+    inner function (closure), unless the variables themselves were returned directly.
+
+    
+</pre>

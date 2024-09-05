@@ -1,0 +1,38 @@
+<pre style="display: flex;">
+
+When you use a closure, JavaScript saves a reference to the inner function in memory, 
+but it also needs to store the entire lexical environment (including the variables of the 
+parent function) because the inner function may need access to those variables.
+
+This means that both the inner function and its parent’s variables are preserved in memory. 
+Essentially, the inner function holds onto a snapshot of the environment in which it was 
+created.
+
+To clarify:
+
+    The parent function's code itself is not saved, but the variables 
+    (its lexical environment) that were in scope when the closure was created are saved.
+
+    The inner function can still access the parent’s variables even after 
+    the parent function has finished executing.
+
+Can We Access the Parent Function?
+
+You cannot directly access the parent function itself (i.e., re-run the parent function), 
+but you can access the variables from the parent function’s lexical environment 
+through the inner function (closure). The inner function maintains access to the parent’s 
+variables, not the logic or the execution of the parent function.
+
+
+
+When a function is executed, it creates a lexical environment that holds all 
+the variables in that function’s scope.
+
+If a nested (inner) function is returned or used outside the parent function, 
+it keeps a reference to this lexical environment (i.e., the variables and their values) 
+even after the parent function has finished executing.
+
+The parent function’s variables are preserved, but you can’t re-execute the parent function.
+You can only access the preserved variables via the closure (the inner function).
+
+ </pre>
